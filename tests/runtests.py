@@ -34,7 +34,7 @@ TEMP_DIR = tempfile.mkdtemp(prefix='django_')
 os.environ['DJANGO_TEST_TEMP_DIR'] = TEMP_DIR
 
 
-DJANGO_PYODBC_DIR = os.path.abspath(os.path.join(RUNTESTS_DIR, '..\..'))
+DJANGO_PYODBC_DIR = os.path.abspath(os.path.join(RUNTESTS_DIR, '../..'))
 if DJANGO_PYODBC_DIR not in sys.path:
     sys.path.append(DJANGO_PYODBC_DIR)
 
