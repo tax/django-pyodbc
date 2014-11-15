@@ -7,10 +7,10 @@ before_install:
   - sudo apt-get install -y tdsodbc unixodbc unixodbc-dev
   - sudo apt-get install -y freetds-dev freetds-common freetds-bin 
   - sudo apt-get install -y python-dev
-  - sudo ls /etc/
-  - sudo cat /etc/odbcinst.ini
-  - sudo echo "[FreeTDS]" > /etc/odbcinst.ini
-  - sudo echo "Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so" >> /etc/odbcinst.ini
+#  - sudo ls /etc/
+#  - sudo cat /etc/odbcinst.ini
+#  - sudo echo "[FreeTDS]" > /etc/odbcinst.ini
+#  - sudo echo "Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so" >> /etc/odbcinst.ini
 env:
   global:
     - secure: "dgEyu4q2lY24KN2W0VLIZlm0fYZq1ybkYoZGZOeLoZXxMmfqysxvnmFLd2X+UDVZmHDEFgCIhsT26OwbQr3b7I5+Hgj6T195UZWuwdSfNK5Vt0ydmQ4KDcWqmklhVuDW0H3oku8pxDGLyKi8tu6zp6jJofQ6ZfgyCjD29teA7LQ="
