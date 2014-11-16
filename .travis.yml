@@ -21,10 +21,10 @@ before_install:
   - sudo mkdir -p /opt/microsoft/sqlncli/bin/
   - sudo mkdir -p /opt/microsoft/sqlncli/11.0.1790.0/docs/
   - sudo chmod -R 777 /opt/microsoft/*
-  - pwd
+  - echo ~
   - cd tests/install/sqlncli-11.0.1790.0/
   - sudo bash install.sh install --accept-license --force
-  - sudo rm -rf sqlncli-11.0.1790.0.zip sqlncli-11.0.1790.0
+  - cd /home/travis/build/tax/django-pyodbc
 env:
   global:
     - secure: "dgEyu4q2lY24KN2W0VLIZlm0fYZq1ybkYoZGZOeLoZXxMmfqysxvnmFLd2X+UDVZmHDEFgCIhsT26OwbQr3b7I5+Hgj6T195UZWuwdSfNK5Vt0ydmQ4KDcWqmklhVuDW0H3oku8pxDGLyKi8tu6zp6jJofQ6ZfgyCjD29teA7LQ="
