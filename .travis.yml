@@ -2,18 +2,53 @@ language: python
 python:
   - "2.7"
 before_install:
+  # - sudo apt-get update -qq
+  # - sudo apt-get install -y g++
+  # - sudo apt-get install -y tdsodbc unixodbc unixodbc-dev
+  # - sudo apt-get install -y freetds-dev freetds-common freetds-bin 
+  # - sudo apt-get install -y python-dev
+  # - sudo chmod 777 /etc/odbcinst.ini
+  # - sudo echo "[FreeTDS]" > /etc/odbcinst.ini
+  # - sudo echo "Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so" >> /etc/odbcinst.ini
   - sudo apt-get update -qq
   - sudo apt-get install -y g++
-  - sudo apt-get install -y tdsodbc unixodbc unixodbc-dev
-  - sudo apt-get install -y freetds-dev freetds-common freetds-bin 
+  - sudo apt-get install -y unzip
   - sudo apt-get install -y python-dev
-  - sudo chmod 777 /etc/odbcinst.ini
-  - sudo echo "[FreeTDS]" > /etc/odbcinst.ini
-  - sudo echo "Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so" >> /etc/odbcinst.ini
+  - sudo dpkg -i tests/install/unixodbc_2.3.2-1_amd64.deb
+  - sudo unzip tests/install/sqlncli-11.0.1790.0.zip
+  - sudo bash tests/install/sqlncli-11.0.1790.0/install.sh install --accept-license --force
 env:
   global:
     - secure: "dgEyu4q2lY24KN2W0VLIZlm0fYZq1ybkYoZGZOeLoZXxMmfqysxvnmFLd2X+UDVZmHDEFgCIhsT26OwbQr3b7I5+Hgj6T195UZWuwdSfNK5Vt0ydmQ4KDcWqmklhVuDW0H3oku8pxDGLyKi8tu6zp6jJofQ6ZfgyCjD29teA7LQ="
 install:
   - pip install Django==1.6.2
   - pip install https://pyodbc.googlecode.com/files/pyodbc-3.0.7.zip
-script: python tests/runtests.py --settings=test_django_pyodbc --noinput -v 2
+script: python tests/runtests.py --settings=test_django_pyodbc_msdriver --noinput -v 2
+
+# apt-get install -y g++
+# apt-get install -y unzip
+# apt-get install -y python-pip
+# apt-get install -y python-dev
+# # sudo apt-get install 
+# # sudo apt-get install 
+# # sudo apt-get install freetds-dev freetds-common freetds-bin tdsodbc unixodbc unixodbc-dev
+# # /etc/odbcinst.ini
+# # [FreeTDS]
+# # Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so  
+
+# # See http://onefinepub.com/2014/03/05/installing-unixodbc-2-3-2-higher-ubuntu-12-04-lts/
+# # http://onefinepub.com/2013/03/07/ms-sql-odbc-ubuntu/
+# # Install odbc driver
+# cd /vagrant/
+# cp $INSTALL_DIR/unixodbc_2.3.2-1_amd64.deb /vagrant/unixodbc_2.3.2-1_amd64.deb
+# dpkg -i unixodbc_2.3.2-1_amd64.deb
+# # Install mssql driver
+# cp $INSTALL_DIR/sqlncli-11.0.1790.0.zip /vagrant/sqlncli-11.0.1790.0.zip
+# unzip sqlncli-11.0.1790.0.zip
+# cd sqlncli-11.0.1790.0
+# bash install.sh install --accept-license --force
+# # Cleanup
+# cd /vagrant/
+# rm -rf unixodbc_2.3.2-1_amd64.deb sqlncli-11.0.1790.0.zip sqlncli-11.0.1790.0
+
+# pip install -r $INSTALL_DIR/requirements.txt
