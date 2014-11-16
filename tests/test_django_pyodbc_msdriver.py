@@ -5,7 +5,7 @@ PASSWORD = os.environ.get('MSSQL_PASSWORD', 'myp@ssword')
 DATABASES = {
     'default': {
         'ENGINE': "django_pyodbc",
-        'HOST': "tcp:localhost,49544",
+        'HOST': "tcp:djangopyodbc.cloudapp.net,49544",
         'USER': "sa",
         'PASSWORD': PASSWORD,
         'NAME': "django_odbc_test",
@@ -17,7 +17,7 @@ DATABASES = {
     },
     'other': {
         'ENGINE': "django_pyodbc",
-        'HOST': "tcp:localhost,49544",
+        'HOST': "tcp:djangopyodbc.cloudapp.net,49544",
         'USER': "sa",
         'PASSWORD': PASSWORD,
         'NAME': "otherdb",
