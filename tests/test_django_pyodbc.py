@@ -27,6 +27,7 @@ DATABASES = {
             'extra_params': 'DATABASE=django_odbc_test;Port=49544;',
             'encoding': 'utf-8',
             'driver': "FreeTDS",
+            'autocommit': True,
         },
     },
     'other': {
@@ -40,6 +41,7 @@ DATABASES = {
             'extra_params': 'DATABASE=otherdb;Port=49544;',
             'encoding': 'utf-8',
             'driver': "FreeTDS",
+            'autocommit': True,
         },
     },
 }
