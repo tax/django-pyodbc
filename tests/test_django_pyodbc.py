@@ -14,6 +14,7 @@
 import os
 
 PASSWORD = os.environ.get('MSSQL_PASSWORD', 'myp@ssword')
+
 DATABASES = {
     'default': {
         'ENGINE': "django_pyodbc",
