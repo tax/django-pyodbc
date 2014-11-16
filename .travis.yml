@@ -28,7 +28,7 @@ before_install:
   - sudo ldd /opt/microsoft/sqlncli/lib64/libsqlncli-11.0.so.1790.0
   - sudo ln -sf /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libssl.so.10
   - sudo ln -sf /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libcrypto.so.10
-  - sudo ln -sf /usr/lib/x86_64-linux-gnu/libodbcinst.so /usr/x86_64-linux-gnu/libodbcinst.so.1  
+  - sudo ln -sf /usr/lib/x86_64-linux-gnu/libodbcinst.so /usr/lib/x86_64-linux-gnu/libodbcinst.so.1  
   - sudo ldd /opt/microsoft/sqlncli/lib64/libsqlncli-11.0.so.1790.0
 # libcrypto.so.10 => not found
 # libssl.so.10 => not found
