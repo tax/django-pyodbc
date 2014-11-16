@@ -26,7 +26,7 @@ DATABASES = {
             'host_is_server': True,
             'extra_params': 'DATABASE=django_odbc_test;Port=49544;',
             'encoding': 'utf-8',
-            'driver': "Free TDS",
+            'driver': "FreeTDS",
         },
     },
     'other': {
@@ -39,7 +39,7 @@ DATABASES = {
             'host_is_server': True,
             'extra_params': 'DATABASE=otherdb;Port=49544;',
             'encoding': 'utf-8',
-            'driver': "Free TDS",
+            'driver': "FreeTDS",
         },
     },
 }
