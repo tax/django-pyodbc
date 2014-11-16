@@ -19,6 +19,8 @@ before_install:
   - sudo unzip tests/install/sqlncli-11.0.1790.0.zip
   - sudo chmod 777 /opt/
   - sudo chmod 777 /opt/*
+  - sudo mkdir /opt/microsoft/
+  - sudo mkdir /opt/microsoft/sqlncli/
   - sudo bash sqlncli-11.0.1790.0/install.sh install --accept-license --force
   - sudo rm -rf sqlncli-11.0.1790.0.zip sqlncli-11.0.1790.0
 env:
