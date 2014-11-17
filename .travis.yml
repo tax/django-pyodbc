@@ -21,4 +21,4 @@ env:
 install:
   - pip install Django==1.6.2
   - pip install https://pyodbc.googlecode.com/files/pyodbc-3.0.7.zip
-script: python tests/runtests.py --settings=test_django_pyodbc_msdriver --noinput -v 2
+script: python tests/runtests.py --settings=test_django_pyodbc_msdriver --noinput -v 3
